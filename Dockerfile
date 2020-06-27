@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 ARG USER=user
 ARG PASSWORD=p
 RUN apt-get update && \
-    apt-get install -y git sudo whois vim
+    apt-get install -y git sudo whois
 RUN useradd -ms /bin/bash $USER -p `mkpasswd $PASSWORD`
 RUN usermod -aG sudo $USER
 # as per https://github.com/sudo-project/sudo/issues/42#issuecomment-609079906
