@@ -21,7 +21,7 @@ need to fork these repositories:
 Then clone your repo with submodules (with ssh or HTTPS):
 
 ````bash
-git clone --recurse-submodules git@github.com:lambda3/dotfiles.git $HOME/.dotfiles
+git clone --recurse-submodules git@github.com:<youruserongithub>/dotfiles.git $HOME/.dotfiles
 ````
 
 Make your customizations, save, commit, push.
@@ -37,14 +37,7 @@ there will be no prompt.
 
 * Clone this repo to ~/.dotfiles
 
-If you are the repo owner make sure the SSH keys are correct, as some submodules
-use SSH, and clone with SSH:
-
-````bash
-git clone --recurse-submodules git@github.com:lambda3/dotfiles.git $HOME/.dotfiles
-````
-
-If you are not the repo owner then you need to use https:
+You should use https:
 
 ````bash
 git clone --recurse-submodules https://github.com/lambda3/dotfiles $HOME/.dotfiles
@@ -52,9 +45,33 @@ git clone --recurse-submodules https://github.com/lambda3/dotfiles $HOME/.dotfil
 
 * Run the install script `~/.dotfiles/install`.
 
-## Cleanning up before installing
+### Cleanning up before installing
 
 Remove all directories that will be replaced by the submodules.
+
+## Regarding fonts
+
+You should use a Powerline enabled font, as some characters are Powerline
+glyphs.
+
+We recommend Cascasdia Code, download it from
+[its release page](https://github.com/microsoft/cascadia-code/releases).
+The font name you want is `Cascadia Code PL`.
+
+Other Powerline fonts can be found at
+[the Powerline fonts repository](https://github.com/powerline/fonts).
+
+### Configuring the Windows Terminal
+
+Add this to your config:
+
+````json
+{
+  "profiles": {
+    "defaults": {
+      "fontFace": "Cascadia Code PL",
+}
+````
 
 ## Contributors
 
